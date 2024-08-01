@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 import { toast } from "react-toastify";
 
-const page = () => {
+const Page = () => {
   const { data: session } = useSession();
   const [properties, setproperties] = useState([]);
   const [loading, setloading] = useState(false);
@@ -145,4 +145,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

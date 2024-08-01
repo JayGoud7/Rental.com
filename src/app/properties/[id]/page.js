@@ -9,7 +9,7 @@ import Bookmark from "@/src/components/Bookmark";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 
-const page = () => {
+const Page = () => {
   const [property, setproperty] = useState(null);
   const { id } = useParams();
 
@@ -53,4 +53,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

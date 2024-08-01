@@ -23,7 +23,7 @@ const UnreadMessageCount = ({ session }) => {
       }
     };
     fetchunreadmessages();
-  }, [session]);
+  }, [session,setunread]);
 
   return (
     <>

@@ -62,7 +62,7 @@ const PropertyAddForm = () => {
       } 
     };
     fetchPropertydata();
-  }, []);
+  }, [id]);
 
   const handlechange = (e) => {
     const { name, value } = e.target;
