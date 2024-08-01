@@ -2,7 +2,6 @@ import connectDB from "@/src/configs/Database";
 import User from "@/src/models/User";
 
 import { getSessionUser } from "@/src/utils/getSessionUser";
-
 export const dynamic = "force-dynamic";
 
 export const POST = async (req) => {
