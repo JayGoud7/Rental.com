@@ -3,6 +3,8 @@ import cloudinary from "@/src/configs/cloudinary";
 import Property from "@/src/models/Property";
 import { getSessionUser } from "@/src/utils/getSessionUser";
 
+export const dynamic = "force-dynamic";
+
 export const GET = async (request) => {
   try {
     await connectDB();

@@ -1,8 +1,8 @@
 import connectDB from "@/src/configs/Database";
 
 import Property from "@/src/models/Property";
-
-export const GET = async (request) => {
+export const dynamic = "force-dynamic";
+export const GET = async (req) => {
   try {
     await connectDB();
 
