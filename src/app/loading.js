@@ -4,7 +4,7 @@ import loader from "@/public/images/loader3.svg";
 const loading = () => {
   return (
     <div className="load">
-      <Image src={loader} width={90} height={90} priority={true} />
+      <Image src={loader} width={90} height={90} alt="imgg" priority={true} />
     </div>
   );
 };

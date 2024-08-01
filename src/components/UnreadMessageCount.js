@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useGlobalContetx } from "../context/GlobalContext";
 import { FaBell } from "react-icons/fa6";
 

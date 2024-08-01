@@ -35,7 +35,7 @@ const PropertyAddForm = () => {
     },
   });
 
-  const [loading, setloading] = useState(true);
+
 
   useEffect(() => {
     setmounted(true);
@@ -59,9 +59,7 @@ const PropertyAddForm = () => {
         setfields(propertyData);
       } catch (error) {
         console.error(error);
-      } finally {
-        setloading(false);
-      }
+      } 
     };
     fetchPropertydata();
   }, []);
@@ -143,7 +141,7 @@ const PropertyAddForm = () => {
 
   return (
     mounted &&
-    !loading && (
+   (
       <form onSubmit={handleSubmit}>
         <h2 className="text-3xl text-center font-semibold mb-6">
           Edit Property
