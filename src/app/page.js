@@ -1,8 +1,8 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Boxes from "../components/Boxes";
-import HomeProperty from "../components/HomeProperty";
-import Footer from "../components/footer";
+import Hero from "@/src/components/Hero";
+import Boxes from "@/src/components/Boxes";
+import HomeProperty from "@/src/components/HomeProperty";
+import Footer from "@/src/components/footer";
 
 const page = () => {
   return (
