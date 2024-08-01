@@ -35,8 +35,6 @@ const PropertyAddForm = () => {
     },
   });
 
-
-
   useEffect(() => {
     setmounted(true);
 
@@ -59,10 +57,10 @@ const PropertyAddForm = () => {
         setfields(propertyData);
       } catch (error) {
         console.error(error);
-      } 
+      }
     };
     fetchPropertydata();
-  }, [id]);
+  });
 
   const handlechange = (e) => {
     const { name, value } = e.target;
@@ -104,18 +102,6 @@ const PropertyAddForm = () => {
     }));
   };
 
-  //   const handleImgchange = (e) => {
-  //     const { files } = e.target;
-  //     const updatedImages = [...fields.images];
-  //     for (const file of files) {
-  //       updatedImages.push(file);
-  //     }
-
-  //     setfields((prevFields) => ({
-  //       ...prevFields,
-  //       images: updatedImages,
-  //     }));
-  //   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -140,8 +126,7 @@ const PropertyAddForm = () => {
   };
 
   return (
-    mounted &&
-   (
+    mounted && (
       <form onSubmit={handleSubmit}>
         <h2 className="text-3xl text-center font-semibold mb-6">
           Edit Property

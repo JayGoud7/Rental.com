@@ -7,7 +7,6 @@ import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 import { FaLocationDot } from "react-icons/fa6";
 const PropertyCard = ({ property }) => {
   return (
-    <Link href={`/properties/${property._id}`}>
     <div className="prop-card">
       <div key={property._id} className="prop-img">
         <Image
@@ -70,7 +69,6 @@ const PropertyCard = ({ property }) => {
         </div>
       </div>
     </div>
-    </Link>
   );
 };
 
