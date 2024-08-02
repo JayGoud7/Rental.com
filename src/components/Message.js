@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useGlobalContetx } from "../context/GlobalContext";
+import Link from "next/link";
 
 const MessageBox = ({ message }) => {
   const [isread, setisread] = useState(message.read);
@@ -72,15 +73,15 @@ const MessageBox = ({ message }) => {
 
         <li>
           <strong>Reply Email:</strong>
-          <a href={`mailto:${message.email}`} className="text-blue-500">
+          <Link href={`mailto:${message.email}`} className="text-blue-500">
             {message.email}
-          </a>
+          </Link>
         </li>
         <li>
           <strong>Reply Phone:</strong>
-          <a href={`tel:${message.phone}`} className="text-blue-500">
+          <Link href={`tel:${message.phone}`} className="text-blue-500">
             {message.phone}
-          </a>
+          </Link>
         </li>
         <li>
           <strong>Received:</strong> {""}

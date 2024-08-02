@@ -11,7 +11,8 @@ const fetchdata = async () => {
     if (!res.ok) {
       throw new error("fetching data error...");
     }
-    return res.json();
+    const data = await res.json();
+    return data;
   } catch (error) {
     console.log(error);
     return [];
