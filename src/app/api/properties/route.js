@@ -103,7 +103,7 @@ export const POST = async (request) => {
           folder: "PropertyImg",
         }
       );
-      console.log(result);
+
       
       imageUploadPromises.push(result.secure_url);
 

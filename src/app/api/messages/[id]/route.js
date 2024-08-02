@@ -2,9 +2,8 @@ import connectDB from "@/src/configs/Database";
 import Message from "@/src/models/Message";
 import { getSessionUser } from "@/src/utils/getSessionUser";
 
-export const dynamic = "force-dynamic";
-
 //put
+export const dynamic = "force-dynamic";
 
 export const PUT = async (req, { params }) => {
   try {

@@ -3,7 +3,6 @@ import Message from "@/src/models/Message";
 import { getSessionUser } from "@/src/utils/getSessionUser";
 
 export const dynamic = "force-dynamic";
-
 //get
 
 export const GET = async () => {
