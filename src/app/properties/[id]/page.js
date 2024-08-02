@@ -11,7 +11,6 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 const PropertyPage = () => {
   const { id } = useParams();
   const [property, setproperty] = useState(null);
- 
 
   useEffect(() => {
     const fetchPropertydata = async () => {
@@ -29,16 +28,12 @@ const PropertyPage = () => {
   }, [id, property]);
 
   if (!property) {
-    return (
-      <h1 className="text-center text-2xl font-bold mt-10">
-        Property Not Found
-      </h1>
-    );
+    return <h1>Property Not Found</h1>;
   }
 
   return (
     <>
-      { property && (
+      {property && (
         <>
           <section className="property-d">
             <PropertyHeadreImg image={property.images[0]} />
