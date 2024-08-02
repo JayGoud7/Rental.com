@@ -36,7 +36,7 @@ const HomeProperty = async () => {
 
   try {
     const data = await fetchdata();
-    recent = data.properties?.sort(() => Math.random() - Math.random()).slice(0, 3) || [];
+    recent = data.properties.sort(() => Math.random() - Math.random()).slice(0, 3) || [];
   } catch (error) {
     console.error("Error fetching data:", error);
   }
