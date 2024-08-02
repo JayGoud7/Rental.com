@@ -556,7 +556,7 @@ const PropertyAddForm = () => {
             accept="image/*"
             multiple
             onChange={handleImgchange}
-            required
+           required
           />
         </div>
 

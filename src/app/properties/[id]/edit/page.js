@@ -1,6 +1,6 @@
 import PropertyEditForm from "@/src/components/PropertyEditForm";
 
-const page = () => {
+const PropertyEditPage = () => {
   return (
     <section className="bg-blue-50">
       <div className="container m-auto max-w-2xl py-24">
@@ -12,4 +12,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PropertyEditPage;

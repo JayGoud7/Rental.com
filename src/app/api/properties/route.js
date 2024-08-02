@@ -3,7 +3,7 @@ import cloudinary from "@/src/configs/cloudinary";
 import Property from "@/src/models/Property";
 import { getSessionUser } from "@/src/utils/getSessionUser";
 
-export const dynamic = "force-dynamic";
+
 
 export const GET = async (request) => {
   try {
@@ -35,13 +35,17 @@ export const POST = async (request) => {
 
     const sessionUser = await getSessionUser();
 
+
     if (!sessionUser || !sessionUser.userId) {
       return new Response("User ID is required", { status: 401 });
     }
 
     const { userId } = sessionUser;
 
+
     const formData = await request.formData();
+ 
+    
 
     //access all values in propertyform
     const amenities = formData.getAll("amenities");
@@ -76,6 +80,8 @@ export const POST = async (request) => {
       owner: userId,
       // images,
     };
+  
+    
 
     //upload images to cloudinary
     const imageUploadPromises = [];
@@ -97,6 +103,8 @@ export const POST = async (request) => {
           folder: "PropertyImg",
         }
       );
+      console.log(result);
+      
       imageUploadPromises.push(result.secure_url);
 
       //wait for all imgs to upload
@@ -104,12 +112,16 @@ export const POST = async (request) => {
 
       propertyData.images = uploadedImages;
     }
+    
 
     const newProperty = new Property(propertyData);
     await newProperty.save();
     return Response.redirect(
       `${process.env.NEXTAUTH_URL}/properties/${newProperty._id}`
     );
+
+   
+    
   } catch (error) {
     return new Response("Failed to add propertyform ", { status: 500 });
   }

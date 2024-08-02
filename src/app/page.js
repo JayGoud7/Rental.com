@@ -4,7 +4,7 @@ import Boxes from "@/src/components/Boxes";
 import HomeProperty from "@/src/components/HomeProperty";
 import Footer from "@/src/components/footer";
 
-const page = () => {
+const HomePage = () => {
   return (
     <section>
       <Hero />
@@ -15,4 +15,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HomePage;

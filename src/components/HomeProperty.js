@@ -4,8 +4,7 @@ import { fetchdata } from "@/src/utils/Propertyrequest";
 
 const HomeProperty = async () => {
   const data = await fetchdata();
-  const recent = data.properties
-    .sort(() => Math.random() - Math.random())
+  const recent = data.properties.sort(() => Math.random() - Math.random())
     .slice(0, 3);
   return (
     <section className="section2">
