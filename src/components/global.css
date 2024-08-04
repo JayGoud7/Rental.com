@@ -720,7 +720,7 @@ footer {
   font-size: 0.7rem;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 470px) {
   .nav-mobile {
     display: flex;
     align-items: center;
