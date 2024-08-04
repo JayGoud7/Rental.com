@@ -126,3 +126,5 @@ export const POST = async (request) => {
     return new Response("Failed to add propertyform ", { status: 500 });
   }
 };
+
+
