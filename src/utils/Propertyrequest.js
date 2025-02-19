@@ -41,17 +41,16 @@
 
 // export { fetchdata, fetchdataId };
 
-
-const apiDomain = process.env.NEXT_PUBLIC_API_DOMAIN || 'https://default-api-domain.com'; // Ensure apiDomain is set
+const apiDomain = process.env.NEXT_PUBLIC_API_DOMAIN; // Ensure apiDomain is set
 
 const fetchdata = async () => {
   try {
     if (!apiDomain) {
-      console.error('API domain is not set.');
+      console.error("API domain is not set.");
       return [];
     }
     const res = await fetch(`${apiDomain}/properties`, {
-      cache: "no-cache",
+      mode: "no-cors",
     });
 
     if (!res.ok) {
@@ -60,7 +59,7 @@ const fetchdata = async () => {
 
     return await res.json();
   } catch (error) {
-    console.error('Error in fetchdata:', error.message);
+    console.error("Error in fetchdata:", error.message);
     return [];
   }
 };
@@ -69,18 +68,24 @@ const fetchdata = async () => {
 const fetchdataId = async (id) => {
   try {
     if (!apiDomain) {
-      console.error('API domain is not set.');
+      console.error("API domain is not set.");
       return null;
     }
-    const res = await fetch(`${apiDomain}/properties/${id}`);
+    const res = await fetch(`${apiDomain}/properties/${id}`, {
+      mode: "no-cors",
+    });
 
     if (!res.ok) {
       throw new Error(`Error fetching data: ${res.status} ${res.statusText}`);
     }
 
     return await res.json();
+
+ 
+    
+
   } catch (error) {
-    console.error('Error in fetchdataId:', error.message);
+    console.error("Error in fetchdataId:", error.message);
     return null;
   }
 };

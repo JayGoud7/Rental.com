@@ -2,8 +2,6 @@ import connectDB from "@/src/configs/Database";
 import Property from "@/src/models/Property";
 import { getSessionUser } from "@/src/utils/getSessionUser";
 
-
-
 export const GET = async (request, { params }) => {
   try {
     await connectDB();
